@@ -26,3 +26,9 @@ La connection s'effectue avec le compte Spotify. L'application demande les accè
 * Notification de recommendations
 * Dernières demandes de la communauté qui corresponde à des tags de l'utilisateur
 * Fil d'actualité de la communauté au groupe de l'utilisateur
+
+### Commandes 
+
+- Pour lancer le serveur de l'API il faut utiliser la commande `npm run dev`.
+- Pour lancer le serveur de base de données il faut lancer le script avec la commande `./run_mongod.sh`.
+- Pour lancer *SpotAmp* il faut utiliser la commande `ng serve`.
