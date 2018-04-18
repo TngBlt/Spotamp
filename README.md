@@ -38,3 +38,4 @@ La connection s'effectue avec le compte Spotify. L'application demande les accè
 
 - [API MEAN](https://medium.com/@vipinswarnkar1989/mean-stack-crud-app-using-angular4-21dce501b77)
 - [Angular frontEnd](https://medium.com/@vipinswarnkar1989/mean-todo-app-with-angular4-32d6d778cf68)
+- [Spotify auth with passport](https://github.com/JMPerez/passport-spotify)
