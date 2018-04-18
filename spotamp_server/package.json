@@ -1,0 +1,23 @@
+{
+  "name": "spotamp_server",
+  "version": "1.0.0",
+  "description": "SpotAmp API server",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app_hooked.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TngBlt",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-es2015-node6": "^0.4.0",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.15",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3",
+    "passport-spotify": "^1.0.0",
+    "source-map-support": "^0.5.4"
+  }
+}
