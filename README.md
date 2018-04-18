@@ -32,3 +32,9 @@ La connection s'effectue avec le compte Spotify. L'application demande les accè
 - Pour lancer le serveur de l'API il faut utiliser la commande `npm run dev`.
 - Pour lancer le serveur de base de données il faut lancer le script avec la commande `./run_mongod.sh`.
 - Pour lancer *SpotAmp* il faut utiliser la commande `ng serve`.
+
+
+#### Ressources utilisées pour ce projet 
+
+- [API MEAN](https://medium.com/@vipinswarnkar1989/mean-stack-crud-app-using-angular4-21dce501b77)
+- [Angular frontEnd](https://medium.com/@vipinswarnkar1989/mean-todo-app-with-angular4-32d6d778cf68)
