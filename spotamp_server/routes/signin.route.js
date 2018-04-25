@@ -29,9 +29,9 @@ passport.use(new SpotifyStrategy({
       profile : profile
     }
     let new_user = userController.updateSpotifyInfoUser(user, done)
-    new_user.then( (user, err) => {
+    /*new_user.then( (user, err) => {
       return done(err, user)
-    })
+    })*/
   }));
 
 signin.route('/')
@@ -41,7 +41,7 @@ signin.route('/')
       'playlist-read-collaborative',
       'playlist-modify-public',
       'playlist-modify-private',
-    ], showDialog: false}), ()=>{},
+    ], showDialog: false}),
   function(req, res){})
 
 signin.route('/success')

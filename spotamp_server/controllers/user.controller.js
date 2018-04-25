@@ -14,7 +14,7 @@ export const addUser = (req, res) => {
   const newUser = new User(req.body)
   newUser.save((err, user) => {
     if (err) return res.json({'success' : false, 'message' : 'Error, couldn\'t add user', err})
-    return res.json({'success' : true, 'message' : 'User added successfully', user})
+    return res.json(user.toObject())
   })
 }
 
@@ -30,16 +30,12 @@ export const updateUser = (req,res) => {
 }
 
 export const getUser = (req,res) => {
-  User.find({_id:req.params.id}).exec((err,user) => {
+  console.log(req.params.id)
+  User.findOne({username : req.params.id}).exec((err,user) => {
     if(err){
       return res.json({'success':false,'message':'Couldn\'t get the user'});
     }
-    if(user.length){
-      return res.json({'success':true,'message':'User fetched by id successfully',user});
-    }
-    else{
-      return res.json({'success':false,'message':'User with the given id not found'});
-    }
+    return res.json(user);
   })
 }
 
