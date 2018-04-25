@@ -1,6 +1,6 @@
 let express = require('express')
 
-import * as spotifyPasseportController from '../controllers/spotify_passeport.controller'
+import * as spotifyPasseportController from '../controllers/login.controller'
 
 const spotify_passeport = express.Router()
 

@@ -4,13 +4,14 @@ import * as userController from '../controllers/user.controller'
 
 const user = express.Router()
 
-user.route('/users')
+user.route('/')
         .get(userController.getUsers)
         .post(userController.addUser)
         .put(userController.updateUser)
 
-user.route('/user/:id')
+user.route('/:id')
         .get(userController.getUser)
         .delete(userController.deleteUser)
+
 
 export default user
