@@ -1,7 +1,7 @@
 # Spotamp
 > Un outil collaboratif pour créer des playlists Spotify
 
-Cette application web permet de partager ses playlits avec la communauté ou avec ses amis pour recevoir des recommendations de titres à ajouter. 
+Cette application web permet de partager ses playlits avec la communauté ou avec ses amis pour recevoir des recommandations de titres à ajouter. 
 
 ## Connexion
 
