@@ -1,7 +1,7 @@
 # Spotamp
 > Un outil collaboratif pour créer des playlists Spotify
 
-Cette application web permet de partager ses playlits avec la communauté ou avec ses amis pour recevoir des recommendations de titres à ajouter. 
+Cette application web permet de partager ses playlits avec la communauté ou avec ses amis pour recevoir des recommandations de titres à ajouter. 
 
 ## Connexion
 
@@ -22,20 +22,56 @@ La connection s'effectue avec le compte Spotify. L'application demande les accè
 
 ## Accueil 
 
-* Liste des playlists de l'utilisateur
-* Notification de recommendations
-* Dernières demandes de la communauté qui corresponde à des tags de l'utilisateur
-* Fil d'actualité de la communauté au groupe de l'utilisateur
+* Barre de navigation avec accès au compte utilisateur et notifications
+* Cartes : 
+  * Dernières demandes de collaboration de mes amis
+  * Dernières demandes publiques de collaboration qui correspondent à des tags (gouts musicaux) de l'utilisateur (pas de demande ne correspondant pas au gout de la personne)
+  * Une carte par communauté suivie par l'utilisateur avec le top actualité
+  
+## Profil utilisateur
 
-### Commandes 
+L'utilisateur à les possibilités suivantes sur l'interface de son compte : 
+* Management de ses playlists :
+  * status de la playlist (privée, entre amis, publiques)
+  * Ajout de playlist
+  * Suppression de playlist
+  * Ajout de musiques avec recherche (à voir... ?)
+* Mes amis
+  * Ajout/suppression d'amis
+  * Affinités musicales (communautés en communs, nb de recommandations acceptées...)
+* Edition du profil :
+  * Changer photo
+  * Editer style musicaux (ajout/suppression, mode automatique ?)
+  
+## Communautés (V2)
+
+Les communautés sont des groupes de personnes gérés par des administrateurs qui se regroupent selon leur goûts musicaux. Il est possible de partager : 
+* Les playlists
+* Un artiste particulier
+* Evennements ? (concerts, festivals..)
+* Titre d'un artiste ? 
+
+Chaque communauté aurait sa page avec son dashboard affichant le top du fil d'actualité. Un système d'onglet sur la page communauté permet de naviguer entre : 
+* Les membres de la communauté (admin et membres)
+* Les playlists de la communauté (filtres récents, most liked...)
+* Les artistes (même filtres)
+* Les titres ? (mêmes filtres)
+* Les demandes de recommandations publiques correspondant au tag (gout musical) de la communauté (?)
+  
+# Dev doc
+
+## Commandes 
 
 - Pour lancer le serveur de l'API il faut utiliser la commande `npm run dev`.
 - Pour lancer le serveur de base de données il faut lancer le script avec la commande `./run_mongod.sh`.
 - Pour lancer *SpotAmp* il faut utiliser la commande `ng serve`.
 
 
-#### Ressources utilisées pour ce projet 
+## Ressources utilisées pour ce projet 
 
 - [API MEAN](https://medium.com/@vipinswarnkar1989/mean-stack-crud-app-using-angular4-21dce501b77)
 - [Angular frontEnd](https://medium.com/@vipinswarnkar1989/mean-todo-app-with-angular4-32d6d778cf68)
 - [Spotify auth with passport](https://github.com/JMPerez/passport-spotify)
+- [Socket IO](https://socket.io/docs/)
+- [Dashboard Spotify de SpotAmp](https://beta.developer.spotify.com/dashboard/applications/9e37acaec39942ae9338212428659bad)
+
