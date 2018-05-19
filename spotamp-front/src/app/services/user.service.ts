@@ -34,8 +34,8 @@ export class UserService {
     return this.httpClient.put<User>(`${this.URL}user/${user._id}`, user);
   }
 
-  public connect(): Observable<User> {
-    return this.httpClient.get<User>(`${this.URL}connect/`);
+  public connect(){
+    window.location.href = `${this.URL}connect/`;
   }
 
 }

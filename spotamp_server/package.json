@@ -23,6 +23,7 @@
     "nodemon": "^1.17.3",
     "passport": "^0.4.0",
     "passport-spotify": "^1.0.0",
-    "source-map-support": "^0.5.4"
+    "source-map-support": "^0.5.4",
+    "socket.io": "latest"
   }
 }

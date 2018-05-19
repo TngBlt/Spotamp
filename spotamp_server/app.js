@@ -12,7 +12,10 @@ import user from './routes/user.route'
 import signin from './routes/signin.route'
 import spotamp_config from './routes/spotamp.config'
 const port = process.env.port || 3001,
-  app = express()
+  app = express(),
+  http  = require('http').createServer(app),
+  io = require('socket.io')(http)
+
 
 mongoose.Promise = global.Promise
 mongoose.connect(spotamp_config.mongodb_dev)
@@ -34,8 +37,6 @@ app.use(session({
   secret: spotamp_config.api_secret.secret ,
   resave: true,
   saveUninitialized: true}));
-app.use(passport.initialize());
-app.use(passport.session());
 
 // Endpoints
 app.use('/api/user', user)
@@ -50,6 +51,10 @@ app.use((req, res, next) => {
   res.status(404).send('<h2 align=center>404 : Page not Found! </h2>')
 })
 
-app.listen(port, () => {
+io.on('connect', function(socket){
+  console.log('a user connected on socket : ' + socket.id);
+});
+
+http.listen(port, () => {
   console.log('SpotAmp running on port : ' + port)
 })
