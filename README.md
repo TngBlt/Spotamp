@@ -3,6 +3,8 @@
 
 Cette application web permet de partager ses playlits avec la communauté ou avec ses amis pour recevoir des recommandations de titres à ajouter. 
 
+Trello du projet : [par ici !](https://trello.com/b/YvqnQF0R/spotamp)
+
 ## Connexion
 
 La connection s'effectue avec le compte Spotify. L'application demande les accès suivants : 
