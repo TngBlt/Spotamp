@@ -3,18 +3,19 @@ import { RouterModule, Routes } from "@angular/router"
 
 import { LoginComponent } from './login/login.component'
 import {DashboardComponent} from "./dashboard/dashboard.component";
+import { AuthGuardService as AuthGuard} from "./auth/auth-guard.service";
 
 const routes : Routes = [
-  {path : '', redirectTo :'/login', pathMatch : 'full'},
+  {path : '', redirectTo :'/dashboard', pathMatch : 'full'},
   {path: 'login', component : LoginComponent },
-  {path: 'dashboard', component : DashboardComponent}
+  {path: 'dashboard', component : DashboardComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(
       routes,
-      {enableTracing : true}
+      {enableTracing : false}
     )
   ],
   exports : [

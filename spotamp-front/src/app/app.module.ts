@@ -9,6 +9,8 @@ import { UserService } from './services/user.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginButtonComponent } from './login/login-button/login-button.component'
 import {SocketService} from "./services/socket.service";
+import {AuthGuardService} from "./auth/auth-guard.service";
+import {AuthService} from "./auth/auth.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import {SocketService} from "./services/socket.service";
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService, AuthGuardService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

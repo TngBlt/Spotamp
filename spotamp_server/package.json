@@ -4,7 +4,7 @@
   "description": "SpotAmp API server",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app_hooked.js ",
+    "start": "nodemon app_hooked.js --debug=3001 --debug-brk",
     "test": "nodemon --inspect app_hooked.js"
   },
   "author": "TngBlt",
@@ -23,7 +23,12 @@
     "nodemon": "^1.17.3",
     "passport": "^0.4.0",
     "passport-spotify": "^1.0.0",
-    "source-map-support": "^0.5.4",
-    "socket.io": "latest"
+    "request": "^2.86.0",
+    "request-promise-native": "^1.0.5",
+    "socket.io": "latest",
+    "source-map-support": "^0.5.4"
+  },
+  "devDependencies": {
+    "jsonwebtoken": "^8.2.1"
   }
 }

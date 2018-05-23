@@ -6,8 +6,8 @@ let express = require('express'),
   sourceMapSupport = require('source-map-support'),
   session = require('express-session'),
   passport = require('passport'),
-  methodOverride = require('method-override')
-
+  methodOverride = require('method-override'),
+  socketService = require("./controllers/socketService")
 import user from './routes/user.route'
 import signin from './routes/signin.route'
 import spotamp_config from './routes/spotamp.config'
@@ -16,6 +16,7 @@ const port = process.env.port || 3001,
   http  = require('http').createServer(app),
   io = require('socket.io')(http)
 
+socketService.init(http)
 
 mongoose.Promise = global.Promise
 mongoose.connect(spotamp_config.mongodb_dev)

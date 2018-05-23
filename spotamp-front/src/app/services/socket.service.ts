@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as io from "socket.io-client"
-import {Observable} from "rxjs/Observable";
+import {Observable} from "rxjs";
 
 @Injectable()
 export class SocketService {
@@ -9,7 +9,7 @@ export class SocketService {
   private authWindow;
 
   constructor() {
-    this.socket = io('http://localhost:3001')
+    this.socket = io()
   }
 
 
@@ -23,8 +23,8 @@ export class SocketService {
 
   openAuthWindow() {
     this.connect();
-    let authUrl = `https://accounts.spotify.com/authorize?client_id=9e37acaec39942ae9338212428659bad&response_type=code&redirect_uri=http://localhost:3001/api/connect&show_dialog=true&state=${this.socket.id}`
-    this.authWindow = window.open(authUrl, "Login to Spotify","dependent=yes,chrome=yes,centerscreen=yes")
+    let authUrl = `https://accounts.spotify.com/authorize?client_id=9e37acaec39942ae9338212428659bad&response_type=code&redirect_uri=http://localhost:3001/api/connect&state=${this.socket.id}`
+    this.authWindow = window.open(authUrl, "Login to Spotify","dependent=yes,chrome=yes,centerscreen=yes,width=365,height=500")
   }
 
   closeAuthWindow() {
