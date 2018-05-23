@@ -62,9 +62,9 @@ Chaque communauté aurait sa page avec son dashboard affichant le top du fil d'a
 
 ## Commandes 
 
-- Pour lancer le serveur de l'API il faut utiliser la commande `npm run dev`.
+- Pour lancer le serveur de l'API il faut utiliser la commande `nodemon app_hooked.js --debug=3001`.
 - Pour lancer le serveur de base de données il faut lancer le script avec la commande `./run_mongod.sh`.
-- Pour lancer *SpotAmp* il faut utiliser la commande `ng serve`.
+- Pour lancer *SpotAmp* il faut utiliser la commande `ng serve --proxy-config proxy.conf.json`.
 
 
 ## Ressources utilisées pour ce projet 
