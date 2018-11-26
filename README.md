@@ -3,6 +3,8 @@
 
 Cette application web permet de partager ses playlits avec la communauté ou avec ses amis pour recevoir des recommandations de titres à ajouter. 
 
+:heavy_exclamation_mark:Le projet va devoir changer de nom. Il va aussi évoluer vers une application mobile, qui correspondra mieux aux besoins. Affaire à suivre...
+
 Trello du projet : [par ici !](https://trello.com/b/YvqnQF0R/spotamp)
 
 ## Connexion
@@ -60,6 +62,9 @@ Chaque communauté aurait sa page avec son dashboard affichant le top du fil d'a
 * Les titres ? (mêmes filtres)
 * Les demandes de recommandations publiques correspondant au tag (gout musical) de la communauté (?)
   
+ Dans les infos des playlists:
+  * [Ajouter les informations avec une moyenne pour chaque paramètres (acousticness)]https://developer.spotify.com/documentation/web-api/reference/tracks/)
+ 
 # Dev doc
 
 ## Commandes 
