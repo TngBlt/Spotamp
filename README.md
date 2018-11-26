@@ -63,7 +63,7 @@ Chaque communauté aurait sa page avec son dashboard affichant le top du fil d'a
 * Les demandes de recommandations publiques correspondant au tag (gout musical) de la communauté (?)
   
  Dans les infos des playlists:
-  * [Ajouter les informations avec une moyenne pour chaque paramètres (acousticness)]https://developer.spotify.com/documentation/web-api/reference/tracks/)
+  * [Ajouter les informations avec une moyenne pour chaque paramètres (acousticness)](https://developer.spotify.com/documentation/web-api/reference/tracks/)
  
 # Dev doc
 
